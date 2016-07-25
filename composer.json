@@ -1,0 +1,17 @@
+{
+    "require": {
+        "php": ">=5.3.2",
+        "yiisoft/yii": "^1.1",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "autoload": {
+        "classmap": [
+            "protected/extensions/mdbApi",
+            "protected/extensions/mdbApi/ApiRequest",
+            "protected/extensions/mdbApi/Session"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": ["php protected/yiic migrate"]
+    }
+}
