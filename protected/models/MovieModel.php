@@ -90,6 +90,10 @@ class MovieModel extends CActiveRecord
 	 */
 	public function getFilePath($imgName)
 	{
+		if (!file_exists('img')) {
+			mkdir('img', 0777, true);
+		}
+
 		return self::IMG_FOLDER_PATH . $imgName;
 	}
 
